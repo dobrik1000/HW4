@@ -3,6 +3,7 @@ package com.company;
 public class Rectangle {
     private double x;
     private double y;
+    private static int createdRectangles = 0;
 
     public Rectangle(double x, double y) {
         this.x = x;
@@ -30,6 +31,7 @@ public class Rectangle {
         } else {
             System.out.println("Это прямоугольник");
         }
+        createdRectangles ++;
     }
     public boolean isTheSameRectangle (Rectangle rectangle) {
         if (this.x == rectangle.x && this.y == rectangle.y) {
@@ -39,7 +41,26 @@ public class Rectangle {
             System.out.println("не равны");
             return false;
         }
+    }
+    static void printRectangleCount() {
+        if (createdRectangles == 1){
+            System.out.println(("Всего был создан " + Rectangle.createdRectangles + " прямоугольник"));
+        } else {
+            System.out.println(( "Всего было создано " + Rectangle.createdRectangles + " прямоугольника" ));
+        }
+    }
 
+    private final static String RUSSIAN_CLASS_NAME = "Прямоугольник";
+    private final static String ENGLISH_CLASS_NAME = "Rectangle";
 
+    static boolean printClassName(boolean printlnRussian) {
+        if (printlnRussian) {
+            System.out.println(RUSSIAN_CLASS_NAME);
+        }
+        else {
+            System.out.println(ENGLISH_CLASS_NAME);
+        }
+
+        return printlnRussian;
     }
 }
