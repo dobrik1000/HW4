@@ -5,6 +5,9 @@ public class Rectangle {
     private double y;
     private static int createdRectangles = 0;
 
+
+
+
     public Rectangle(double x, double y) {
         this.x = x;
         this.y = y;
@@ -17,8 +20,10 @@ public class Rectangle {
 
 
     double calculateArea() {
+        createdRectangles++;
         double z = x * y;
         return z;
+
     }
 
     public void printArea() {
@@ -31,7 +36,6 @@ public class Rectangle {
         } else {
             System.out.println("Это прямоугольник");
         }
-        createdRectangles ++;
     }
     public boolean isTheSameRectangle (Rectangle rectangle) {
         if (this.x == rectangle.x && this.y == rectangle.y) {
