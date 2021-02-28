@@ -1,10 +1,11 @@
 package com.company;
 
 public class Rectangle {
+    private final static String RUSSIAN_CLASS_NAME = "Прямоугольник";
+    private final static String ENGLISH_CLASS_NAME = "Rectangle";
+    private static int createdRectangles;
     private double x;
     private double y;
-    private static int createdRectangles = 0;
-
 
 
 
@@ -20,7 +21,6 @@ public class Rectangle {
 
 
     double calculateArea() {
-        createdRectangles++;
         double z = x * y;
         return z;
 
@@ -52,10 +52,8 @@ public class Rectangle {
         } else {
             System.out.println(( "Всего было создано " + Rectangle.createdRectangles + " прямоугольника" ));
         }
+        createdRectangles++;
     }
-
-    private final static String RUSSIAN_CLASS_NAME = "Прямоугольник";
-    private final static String ENGLISH_CLASS_NAME = "Rectangle";
 
     static boolean printClassName(boolean printlnRussian) {
         if (printlnRussian) {
