@@ -3,7 +3,7 @@ package com.company;
 public class Rectangle {
     private final static String RUSSIAN_CLASS_NAME = "Прямоугольник";
     private final static String ENGLISH_CLASS_NAME = "Rectangle";
-    private static int createdRectangles;
+    static private int createdRectangles;
     private double x;
     private double y;
 
@@ -12,11 +12,13 @@ public class Rectangle {
     public Rectangle(double x, double y) {
         this.x = x;
         this.y = y;
+        createdRectangles++;
     }
 
     public Rectangle(double x) {
         this.x = x;
         this.y = x;
+        createdRectangles++;
     }
 
 
@@ -51,8 +53,7 @@ public class Rectangle {
             System.out.println(("Всего был создан " + Rectangle.createdRectangles + " прямоугольник"));
         } else {
             System.out.println(( "Всего было создано " + Rectangle.createdRectangles + " прямоугольника" ));
-        }
-        createdRectangles++;
+        };
     }
 
     static boolean printClassName(boolean printlnRussian) {

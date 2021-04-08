@@ -9,13 +9,10 @@ public class Main {
 
         a.printRectangleKind();
         a.printArea();
-        a.printRectangleCount();
         b.printRectangleKind();
         b.printArea();
-        b.printRectangleCount();
         c.printRectangleKind();
         c.printArea();
-        c.printRectangleCount();
 
         System.out.println();
 
